@@ -1,0 +1,20 @@
+from django.db import models
+
+
+# Create your models here.
+from django.urls import reverse
+
+
+class Posts(models.Model):
+    title = models.CharField(max_length=250)
+    author = models.ForeignKey(
+        'auth.User',
+        on_delete=models.CASCADE,
+    )
+    body = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('detail', args=[str(self.id)])

@@ -1,0 +1,11 @@
+header h1 a {
+color: black;
+}
+
+header .jumbotron {
+    background-color: lightgreen;
+}
+
+nav{
+    background: cornflowerblue;
+}

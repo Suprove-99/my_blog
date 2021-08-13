@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+{% block content %}
+
+    <header>
+        <div class="jumbotron">
+            <h1>Suprove Chandra Sarkar<br><h5>BSc. in CSE (2018-present)</h5><h5>
+                Chittagong University of Engineering and Technology (CUET)</h5></h1>
+            <div style="text-align: right; margin-top: 1rem">
+                <a href="{% url 'create_post' %}">
+                    <button style="background: coral">+New Post</button>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    {% for post in object_list %}
+        <div class="post-entry jumbotron">
+            <h2>{{ post.title }}</h2>
+            <p>
+                {{ post.body|truncatechars:55 }}<a href="{% url 'detail' post.pk %}">read more</a>
+            </p>
+
+        </div>
+    {% endfor %}
+
+{% endblock content %}
+</body>
+</html>

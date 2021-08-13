@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+{% block content %}
+    <div class="jumbotron">
+        <h3 style="text-align: center;">Details</h3>
+        <hr style="border-color: green">
+        <div class="post-entry">
+            <h2>{{ posts.title }}</h2>
+            <p>{{ posts.body }}</p>
+        </div>
+        <div>
+            <a href="{% url 'update_post' posts.pk %}">
+                <button>Update</button>
+            </a>
+            <a href="{% url 'delete_post' posts.pk %}">
+                <button>Delete</button>
+            </a>
+        </div>
+    </div>
+
+{% endblock content %}
+</body>
+</html>

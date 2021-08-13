@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+{% block content %}
+    <div class="jumbotron">
+        <h3 style="text-align: center;">Create Post</h3>
+        <hr style="border-color: green">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+    </div>
+{% endblock content %}
+
+</body>
+</html>
