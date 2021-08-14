@@ -1,11 +1,11 @@
 header h1 a {
-color: black;
+    color: black;
 }
 
 header .jumbotron {
     background-color: lightgreen;
 }
 
-nav{
+nav {
     background: cornflowerblue;
 }
