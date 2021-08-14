@@ -1,5 +1,5 @@
 # my_blog
---Project name: "Blog Project".
+--Project name: "Blog Project".  
 --Features:
 CRUD (Create, Read, Update, Delete).
 Log In, Log Out
