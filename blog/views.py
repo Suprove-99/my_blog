@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import Posts
 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -32,3 +32,6 @@ class DeletePostView(LoginRequiredMixin, DeleteView):
     model = Posts
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
+
+class AboutView(TemplateView):
+    template_name = 'about.html'

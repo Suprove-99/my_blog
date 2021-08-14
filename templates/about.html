@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+{% block content %}
+    <div class="jumbotron">
+        <h2 style="text-align: center">About</h2>
+        <hr>
+        <ul style="font-size: x-large">
+            <li>Project name: <b>"Blog Project</b>"</li>
+            <li>
+                Features:
+                <ul>
+                    <li><b>CRUD</b> (Create, Read, Update, Delete)</li>
+                    <li><b>Log In, Log Out</b><br>
+                        (N.B: Since it is a personal blog project, permission to log in is only limited
+                        to one user so that anyone can not create, edit or delete a post although they can read the
+                        posts.
+                    </li>
+                    <li><b>'Class Based Views'</b> and <b>'Generic views'</b> are implemented to create views.</li>
+                </ul>
+            </li>
+            <li>Backend: Python (Framework: <b>"Django"</b> )</li>
+            <li>Frontend: HTML, CSS (Framework: <b>"Bootstrap"</b>)</li>
+
+        </ul>
+    </div>
+{% endblock content %}
+</body>
+</html>
